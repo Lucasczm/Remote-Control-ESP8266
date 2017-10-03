@@ -4,7 +4,7 @@ const char MAIN_page[] PROGMEM = R"=====(
   <style>.c{text-align: center;} div,input{padding:5px;font-size:1em;} input{width:70%;} body{background-color: #1fa3ec;color:#fff;text-align: center;font-family:verdana;margin: auto;width: 80%;} button{border:0;border-radius:0rem;background-color:#1fa3ec;color:#fff;line-height:2.4rem;font-size:1.5rem;width:5rem; height:3rem} .q{float: right;width: 64px;text-align: right;}button:hover{background-color:#1577ad;}ul {list-style-type: none; margin: 0; padding: 0; width: 100%; float:left; } li{float: left;} .h li { display: inline; float: left; } .b{background-color:white;} </style>
   <script>function startVibrate(){navigator.vibrate(50);}</script>
   </head>
-  <a href='/' style='color:#fff;text-decoration: none;'><button<h3>Controle Remoto - AZbox</h3></a>
+  <a href='/' style='color:#fff;text-decoration: none;'><button<h3>Controle Remoto</h3></a>
   <ul><li><a href='\?function=p+'><button onClick='startVibrate()'>P +</button></a></li>
   <li><a href='\?function=cima'><button onClick='startVibrate()'>/\</button></a></li>
   <li><a href='\?function=mute'><button onClick='startVibrate()'>MUTE</button></a></li>
