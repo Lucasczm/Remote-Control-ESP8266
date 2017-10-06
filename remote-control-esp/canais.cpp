@@ -111,7 +111,7 @@ if (canal =="sport tv2 alternativo")ch_numero = "187";
 	if (canal == "espn brasil")		    ch_numero = "065";
 	if (canal == "fox sports")		    ch_numero = "080";
 	if (canal == "fox sports2")		    ch_numero = "081";
-	if (canal == "comabate")		      ch_numero = "037";
+	if (canal == "combate")		        ch_numero = "037";
 	if (canal == "premiere 1")		    ch_numero = "";  
 	if (canal == "premiere 2")		    ch_numero = "151";
 	if (canal == "premiere 3")		    ch_numero = "153";
@@ -139,7 +139,7 @@ if (canal =="sport tv2 alternativo")ch_numero = "187";
 bool Canais::pergarNumero(String canal) {
 	if (interpretar(canal)) {
 		for (int i = 0; i < 3; i++) {
-				 if	(ch_numero[i] == '0') tecla[i] = k_0;
+				    if(ch_numero[i] == '0') tecla[i] = k_0;
 			else if (ch_numero[i] == '1') tecla[i] = k_1;
 			else if (ch_numero[i] == '2') tecla[i] = k_2;
 			else if (ch_numero[i] == '3') tecla[i] = k_3;
@@ -158,10 +158,14 @@ bool Canais::trocarCanal(String canal) {
 	if (pergarNumero(canal)) {
 		irsend.sendNEC(k_exit, 32);
 		delay(500);
-		irsend.sendNEC(tecla[0], 32);
-		delay(500);
+		if(tecla[0] != k_0){
+		  irsend.sendNEC(tecla[0], 32);
+      delay(500);
+		}
+   if((tecla[0] != k_0 && tecla[1] != k_0) || (tecla[0] == k_0 && tecla[1] != k_0) || (tecla[0] != k_0 && tecla[1] == k_0)){
 		irsend.sendNEC(tecla[1], 32);
 		delay(500);
+   }
 		irsend.sendNEC(tecla[2], 32);
 		delay(500);
 		irsend.sendNEC(k_ok, 32);
