@@ -46,6 +46,6 @@ You can change channel by URL http://192.168.4.1/?canal= (channel you want)
 
 ## Authors
 
-* [Lucas Machado](https://github.com/ChuckCM)
+* [Lucas Machado](https://github.com/Lucasczm)
 
 See also the list of [contributors](https://github.com/ChuckCM/Remote-Control-ESP8266/contributors) who participated in this project.
